@@ -6,7 +6,7 @@ import {
 import { LoginScreen } from "../components/auth/LoginScreen";
 import { RegisterScreen } from "../components/auth/RegisterScreen";
 export const AuthRouter = () => {
-    console.log('jgjgj');
+    // console.log('jgjgj');
     return (
         <div className="auth__main">
             <div className="auth__box-container">
@@ -19,8 +19,7 @@ export const AuthRouter = () => {
                     <Route exact
                         path="/auth/register"
                         element={<RegisterScreen />} />
-
-                    {/* <Navigate to="/auth/register" /> */}
+                        {/* <Navigate to="/auth/register" />  */}
                 </Routes>
 
             </div>
