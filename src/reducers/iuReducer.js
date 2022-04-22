@@ -1,4 +1,4 @@
-import { initializeApp } from "@firebase/app"
+// import { initializeApp } from "@firebase/app"
 import { types } from "../components/types/types";
 
 const initialState = {
