@@ -14,12 +14,11 @@ export const startLoginEmailPassword = (email, password) => {
                 dispatch(login(user.uid, user.displayName));
                 dispatch(uiFinishLoading());
                 //end
-            }).catch(
-                e => {
-                    console.log(e);
-                    dispatch(uiFinishLoading());
-                    Swal.fire('Error', e.message, 'error');
-                }
+            }).catch(e => {
+                console.log(e.message);
+                dispatch(uiFinishLoading());
+                Swal.fire('Error', e.message, 'error');
+            }
             )
 
     }
