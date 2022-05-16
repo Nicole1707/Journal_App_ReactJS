@@ -4,8 +4,8 @@ import 'firebase/auth';
 import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';
 import { GoogleAuthProvider } from 'firebase/auth';
- 
- 
+
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyDSErFc3KR4ipXpdNfHuo_-f5o1idnbWsM",
@@ -15,15 +15,15 @@ const firebaseConfig = {
     messagingSenderId: "820723611305",
     appId: "1:820723611305:web:6ab2a2a335eb7cdfa41bb8"
 };
- 
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
- 
+
 const db = getFirestore();
- 
+
 const googleAuthProvider = new GoogleAuthProvider();
- 
-export{
+
+export {
     db,
-    googleAuthProvider
+    googleAuthProvider,
 }
