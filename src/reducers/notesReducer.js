@@ -5,22 +5,22 @@ const initialState = {
 };
 
 
-export const notesReducer = (state = [], action) => {
+export const notesReducer = (state = initialState, action) => {
     switch (action.type) {
         case types.notesActive:
-            return{
+            return {
                 ...state,
-                active:{
+                active: {
                     ...action.payload
                 }
             }
         case types.notesLoad:
-            return{
+            return {
                 ...state,
                 notes: [...action.payload]
             }
 
-    default:
-       return state;
+        default:
+            return state;
     }
 }
