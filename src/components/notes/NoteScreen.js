@@ -23,7 +23,7 @@ export const NoteScreen = () => {
 
     useEffect(() => {
         dispatch(activeNote(formValues.id, { ...formValues }));
-        console.log(formValues);
+        // console.log(formValues);
     }, [formValues, dispatch])
 
     return (
@@ -49,7 +49,7 @@ export const NoteScreen = () => {
                     (note.url)
                     && (<div className="notes__image">
                         <img
-                            src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg"
+                            src={note.url}
                             alt="Arbol" />
 
                     </div>)
