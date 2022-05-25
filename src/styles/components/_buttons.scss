@@ -3,7 +3,7 @@
     border: none;
     color: white;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 15px;
     padding: 7px 10px 7px 10px;
 
     transition: color .3s ease;
@@ -17,13 +17,25 @@
 }
 .btn-primary{
     background-color: $primary;
-    border-radius: 2px;
+    border-radius: 12px;
+    margin-bottom: 15px;
 
     &:disabled{
         background-color: lighten($color: $primary, $amount: 1);
     }
+    &:hover{
+        background-color: lighten($color: $primary, $amount: 15);
+    }
    
 
+}
+.btn-danger{
+    background-color: $danger;
+    border-radius: 2px;
+    transition: background-color .3s ease;
+    &:hover{
+        background-color: darken($color: $danger, $amount: 15)
+    }
 }
 .btn-block{
     width: 100%;

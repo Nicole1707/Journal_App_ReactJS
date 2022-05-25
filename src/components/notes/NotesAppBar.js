@@ -11,7 +11,6 @@ export const NotesAppBar = () => {
 
 
     const handleSave = () => {
-        console.log(active);
         dispatch(startSaveNote(active))
     }
     const handleFileChange = (e) => {

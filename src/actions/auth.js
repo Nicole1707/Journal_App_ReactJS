@@ -2,6 +2,7 @@ import { getAuth, signInWithPopup, createUserWithEmailAndPassword, updateProfile
 import { types } from '../components/types/types';
 import { googleAuthProvider } from '../firebase/firebase-config';
 import { uiFinishLoading, uiStartLoading } from './iu';
+import { noteLogout } from './notes';
 import Swal from 'sweetalert2';
 
 export const startLoginEmailPassword = (email, password) => {
@@ -65,7 +66,8 @@ export const startLogout = () => {
     return async (dispatch) => {
         const auth = getAuth();
         signOut(auth).then(() => {
-            dispatch(logout())
+            dispatch(logout());
+            dispatch(noteLogout());
             // Sign-out successful.
         }).catch((error) => {
             // An error happened.

@@ -10,7 +10,7 @@
     height: 100vh;
     padding-left: 10px;
     padding-right: 10px;
-    width: 450px;
+    width: 475px;
 }
 .journal__sidebar-navbar{
     display: flex;
@@ -36,6 +36,7 @@
 .journal__entries{
     flex: 1 1 auto;
     margin-top: 30px;
+    padding: 5px;
     overflow-y: scroll;
 }
 .journal__entry{

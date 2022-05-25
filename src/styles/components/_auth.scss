@@ -10,11 +10,12 @@
 .auth__box-container{
     background-color: white;
     box-shadow: 0px 3px $dark-pink;
-    border-radius: 2px;
+    border-radius: 22px;
     padding: 20px;
-    width: 250px;
+    width: 350px;
 }
 .auth__tittle{
+    font-size: 30px;
     color:darken($color: $primary, $amount: 20) ;
     margin-bottom: 20px;
 }
@@ -23,7 +24,7 @@
     border: 0px;
     border-bottom: 1px solid $light-pink;
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     height: 20px;
     width: 100%;
     

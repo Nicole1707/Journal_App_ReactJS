@@ -8,21 +8,21 @@ import { startRegisterWithEmailPasswordName } from '../../actions/auth'
 export const RegisterScreen = () => {
 
     const dispatch = useDispatch()
-    const { msgError } = useSelector( state => state.iu );
+    const { msgError } = useSelector(state => state.iu);
 
 
     const [formValues, handleInputChange] = useForm({
-        name: 'mekke',
+        name: '',
         email: '',
-        password: 1234,
-        password2: 1234
+        password: '',
+        password2: ''
     })
 
     const { name, email, password, password2 } = formValues;
     const handleRegister = (e) => {
         e.preventDefault();
         if (isFormValid()) {
-           dispatch(startRegisterWithEmailPasswordName(email,password,name))
+            dispatch(startRegisterWithEmailPasswordName(email, password, name))
         }
     }
 
@@ -47,11 +47,11 @@ export const RegisterScreen = () => {
         <>
             <h3 className="auth__tittle">Register Screen</h3>
             <form onSubmit={handleRegister}>
-              {  
-              msgError &&
-              ( <div className="auth__alert-error">
-                    {msgError}
-                </div> ) }
+                {
+                    msgError &&
+                    (<div className="auth__alert-error">
+                        {msgError}
+                    </div>)}
                 <input
                     type="text"
                     placeholder="Name"
